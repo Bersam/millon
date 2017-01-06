@@ -21,6 +21,7 @@ class Home extends React.Component {
         type: PropTypes.string.isRequired,
         score: PropTypes.number.isRequired,
         status: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
       })),
     })).isRequired,
   };
@@ -39,12 +40,14 @@ class Home extends React.Component {
     const newState = this.state;
     newState.questions[index].score.forEach((score) => {
       if (isNaN(newState.result[score.type])) {
-        newState.result[score.type] = 0;
+        newState.result[score.type] = {};
+        newState.result[score.type].sum = 0;
+        newState.result[score.type].name = score.name;
       }
       if (score.status === status) {
-        newState.result[score.type] += score.score;
+        newState.result[score.type].sum += score.score;
       } else if (newState.questions[index].status !== undefined) {
-        newState.result[score.type] -= score.score;
+        newState.result[score.type].sum -= score.score;
       }
     });
     newState.questions[index].status = status;

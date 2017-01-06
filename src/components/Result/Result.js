@@ -39,9 +39,9 @@ class Header extends React.Component {
           {Object.keys(this.props.result).map(key => (
             <tr className={s.newsItem}>
               <td>{key}</td>
-              <td>{this.props.result[key]}</td>
-              <td>{this.props.result[key]}</td>
-              <td />
+              <td>{this.props.result[key].sum}</td>
+              <td>{this.props.result[key].sum}</td>
+              <td>{this.props.result[key].name}</td>
             </tr>
            ))}
         </tbody>

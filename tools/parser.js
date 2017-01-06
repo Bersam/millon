@@ -20,6 +20,7 @@ const main = () => {
         const score = {};
         score.score = parseInt(question[step], 0);
         score.type = (step % 2 === 0) ? heads[step - 1] : heads[step];
+        score.name = (step % 2 === 0) ? heads[step] : heads[step + 1];
         score.status = (step % 2 === 0) ? 'no' : 'yes';
         obj.score.push(score);
       }

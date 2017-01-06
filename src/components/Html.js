@@ -1,4 +1,4 @@
-/**
+/**  -*- mode: react; -*-
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
  * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
@@ -31,6 +31,8 @@ class Html extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
           {style && <style id="css" dangerouslySetInnerHTML={{ __html: style }} />}
+          <link href="https://cdn.rawgit.com/rastikerdar/samim-font/v1.0.2/dist/font-face.css" rel="stylesheet" type="text/css" />
+
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{ __html: children }} />

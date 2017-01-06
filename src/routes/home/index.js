@@ -10,6 +10,7 @@
 import React from 'react';
 import Home from './Home';
 import Layout from '../../components/Layout';
+import data from '../../data/data.json';
 
 export default {
 
@@ -29,51 +30,9 @@ export default {
      * });
      * const { data } = await resp.json();
      * if (!data || !data.news) throw new Error('Failed to load the news feed.');*/
-    const data = {};
-    data.questions = [];
-    data.questions.push({
-      text: 'اخیراً، حتی صبح ها احساس ضعف و بی حالی می کنم.',
-      score: [{
-        type: 'H',
-        status: 'yes',
-        score: 1,
-      }],
-    });
-    data.questions.push({
-      text: 'اخیراً، حتی صبح ها احساس ضعف و بی حالی می کنم.',
-      score: [{
-        type: 'Z',
-        status: 'no',
-        score: 1,
-      }],
-    });
-    data.questions.push({
-      text: 'اخیراً، حتی صبح ها احساس ضعف و بی حالی می کنم.',
-      score: [{
-        type: 'ZZ',
-        status: 'yes',
-        score: 1,
-      }],
-    });
-    data.questions.push({
-      text: 'اخیراً، حتی صبح ها احساس ضعف و بی حالی می کنم.',
-      score: [{
-        type: 'H',
-        status: 'yes',
-        score: 1,
-      }],
-    });
-    data.questions.push({
-      text: 'اخیراً، حتی صبح ها احساس ضعف و بی حالی می کنم.',
-      score: [{
-        type: 'H',
-        status: 'yes',
-        score: 1,
-      }],
-    });
     return {
       title: 'React Starter Kit',
-      component: <Layout><Home questions={data.questions} /></Layout>,
+      component: <Layout><Home questions={data.data} /></Layout>,
     };
   },
 

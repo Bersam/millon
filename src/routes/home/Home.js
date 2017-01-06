@@ -39,7 +39,7 @@ class Home extends React.Component {
     }
     const newState = this.state;
     newState.questions[index].score.forEach((score) => {
-      if (isNaN(newState.result[score.type])) {
+      if (newState.result[score.type] === undefined) {
         newState.result[score.type] = {};
         newState.result[score.type].sum = 0;
         newState.result[score.type].name = score.name;

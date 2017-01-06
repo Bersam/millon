@@ -28,6 +28,7 @@
   color: color(var(--brand-color) lightness(+10%));
   text-decoration: none;
   font-size: 1.75em; /* ~28px */
+  float: left;
 }
 
 .brandTxt {
@@ -41,6 +42,7 @@
 
 .banner {
   text-align: center;
+  clear: both;
 }
 
 .bannerTitle {

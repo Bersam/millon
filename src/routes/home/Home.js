@@ -1,4 +1,4 @@
-/**
+/**  -*- mode: react; -*-
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
  * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
@@ -10,32 +10,65 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
+import Result from '../../components/Result';
+import Question from '../../components/Question';
 
 class Home extends React.Component {
   static propTypes = {
-    news: PropTypes.arrayOf(PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-      contentSnippet: PropTypes.string,
+    questions: PropTypes.arrayOf(PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      score: PropTypes.arrayOf(PropTypes.shape({
+        type: PropTypes.string.isRequired,
+        score: PropTypes.number.isRequired,
+        status: PropTypes.string.isRequired,
+      })),
     })).isRequired,
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.state.result = {};
+    this.state.questions = props.questions;
+  }
+
+  handleOptionChange = (index, status) => {
+    if (this.state.questions[index].status === status) {
+      return;
+    }
+    const newState = this.state;
+    newState.questions[index].score.forEach((score) => {
+      if (isNaN(newState.result[score.type])) {
+        newState.result[score.type] = 0;
+      }
+      if (score.status === status) {
+        newState.result[score.type] += score.score;
+      } else if (newState.questions[index].status !== undefined) {
+        newState.result[score.type] -= score.score;
+      }
+    });
+    newState.questions[index].status = status;
+    this.setState(newState);
+  };
+
 
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>React.js News</h1>
-          <ul className={s.news}>
-            {this.props.news.map((item, index) => (
-              <li key={index} className={s.newsItem}>
-                <a href={item.link} className={s.newsTitle}>{item.title}</a>
-                <span
-                  className={s.newsDesc}
-                  dangerouslySetInnerHTML={{ __html: item.contentSnippet }}
-                />
-              </li>
+          <h1>سوال‌ها</h1>
+          <p>به همه‌ی سوالات پاسخ دهید.</p>
+          <ul>
+            {this.state.questions.map((item, index) => (
+              <Question
+                index={index}
+                text={item.text}
+                status={this.state.questions[index].status}
+                handleOptionChange={this.handleOptionChange}
+              />
             ))}
           </ul>
+          <Result result={this.state.result} />
         </div>
       </div>
     );

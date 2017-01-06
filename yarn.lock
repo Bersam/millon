@@ -1042,6 +1042,10 @@ babylon@^6.11.0, babylon@^6.13.0:
   version "6.14.1"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.14.1.tgz#956275fab72753ad9b3435d7afe58f8bf0a29815"
 
+babyparse@^0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/babyparse/-/babyparse-0.4.6.tgz#8ff29b62d1e600c0654afd63457f97fa2c36e9c1"
+
 backo2@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"

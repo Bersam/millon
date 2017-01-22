@@ -16,3 +16,11 @@
 th {
   text-align: center;
 }
+
+.progress {
+  margin: 5px;
+}
+
+.table {
+  margin: 25px 10px;
+}

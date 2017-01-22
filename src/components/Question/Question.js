@@ -8,7 +8,7 @@
  */
 
 import React, { PropTypes } from 'react';
-import { ButtonGroup, Button } from 'react-bootstrap';
+import { ButtonGroup, Button, Row, Col } from 'react-bootstrap';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Question.css';
 
@@ -16,7 +16,7 @@ class Header extends React.Component {
   static propTypes = {
     index: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
-    status: PropTypes.string.isRequired,
+    status: PropTypes.string,
     handleOptionChange: PropTypes.func.isRequired,
   };
 
@@ -25,23 +25,27 @@ class Header extends React.Component {
     const text = this.props.text;
     const status = this.props.status;
     return (
-      <li key={index} className={s.questionItem}>
-        <p>{text}</p>
-        <ButtonGroup>
-          <Button
-            className={status === 'yes' && 'btn-primary'}
-            onClick={() => this.props.handleOptionChange(index, 'yes')}
-          >
-            بله
-          </Button>
-          <Button
-            className={status === 'no' && 'btn-primary'}
-            onClick={() => this.props.handleOptionChange(index, 'no')}
-          >
-            خیر
-          </Button>
-        </ButtonGroup>
-      </li>
+      <Row value={index + 1} key={index} className={s.questionItem}>
+        <Col md={8} className="text-right">
+          <p>{index + 1}. {text}</p>
+        </Col>
+        <Col md={4} className="text-center">
+          <ButtonGroup>
+            <Button
+              className={status === 'no' && 'btn-primary'}
+              onClick={() => this.props.handleOptionChange(index, 'no')}
+            >
+              خیر
+            </Button>
+            <Button
+              className={status === 'yes' && 'btn-primary'}
+              onClick={() => this.props.handleOptionChange(index, 'yes')}
+            >
+              بله
+            </Button>
+          </ButtonGroup>
+        </Col>
+      </Row>
     );
   }
 }

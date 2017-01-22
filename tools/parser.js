@@ -56,16 +56,7 @@ const brparser = () => {
       if (question[step] !== '') {
         result[heads[step]][question[26]] = parseInt(question[step], 0);
       }
-      // const range = question[27].split('-');
-      // range[0] = parseInt(range[0], 0);
-      // range[1] = (range[1]) ? parseInt(range[1], 0) : range[0];
-      // for (let i = range[0]; i <= range[1]; i += 1) {
-      //   if (question[step] !== '') {
-      //     result[heads[step]][i] = parseInt(question[step], 0);
-      //   }
-      // }
     }
-    // return obj;
   });
 
   const file = `./src/data/br-${argv.gender}.json`;

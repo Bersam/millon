@@ -8,6 +8,7 @@
  */
 
 import React, { PropTypes } from 'react';
+import { Pagination, Row, Col } from 'react-bootstrap';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 import Result from '../../components/Result';
@@ -30,8 +31,15 @@ class Home extends React.Component {
     super(props);
     this.state = {};
     this.state.result = {};
+    this.state.activePage = 1;
     this.state.questions = props.questions;
   }
+
+  handlePageChange = (eventKey) => {
+    this.setState({
+      activePage: eventKey,
+    });
+  };
 
   handleOptionChange = (index, status) => {
     if (this.state.questions[index].status === status) {
@@ -56,22 +64,49 @@ class Home extends React.Component {
 
 
   render() {
+    const fromNo = (this.state.activePage - 1) * 10;
+    const toNo = this.state.activePage * 10;
+    const questions = this.state.questions.slice(fromNo, toNo);
+    const maxPage = parseInt((this.state.questions.length / 10) + 1, 0);
     return (
       <div className={s.root}>
         <div className={s.container}>
           <h1>سوال‌ها</h1>
           <p>به همه‌ی سوالات پاسخ دهید.</p>
-          <ul>
-            {this.state.questions.map((item, index) => (
-              <Question
-                index={index}
-                text={item.text}
-                status={this.state.questions[index].status}
-                handleOptionChange={this.handleOptionChange}
+          <Row>
+            <Col className="text-center">
+              <Pagination
+                bsSize="medium"
+                items={maxPage}
+                activePage={this.state.activePage}
+                onSelect={this.handlePageChange}
               />
-            ))}
-          </ul>
+            </Col>
+          </Row>
+          <br />
+          {questions.map((item, index) => (
+            <Question
+              key={index}
+              index={index + fromNo}
+              text={item.text}
+              status={questions[index].status}
+              handleOptionChange={this.handleOptionChange}
+            />
+           ))}
+          <hr />
+          {(this.state.activePage === maxPage) &&
           <Result result={this.state.result} />
+          }
+          <Row>
+            <Col className="text-center">
+              <Pagination
+                bsSize="medium"
+                items={maxPage}
+                activePage={this.state.activePage}
+                onSelect={this.handlePageChange}
+              />
+            </Col>
+          </Row>
         </div>
       </div>
     );

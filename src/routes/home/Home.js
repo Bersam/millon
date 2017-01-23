@@ -112,7 +112,7 @@ class Home extends React.Component {
             <Col md={2} className={`text-left ${s.vcenter}`}>
               جنسیت:
             </Col>
-            <Col md={2} className={`text-right ${s.vcenter}`} align="middle">
+            <Col md={2} className={`text-right ${s.vcenter}`}>
               <ButtonGroup>
                 <Button
                   className={gender === 'male' && 'btn-primary'}

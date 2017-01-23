@@ -16,3 +16,9 @@
 .questionItem {
   padding-bottom: 6px;
 }
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}

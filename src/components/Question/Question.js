@@ -26,10 +26,10 @@ class Header extends React.Component {
     const status = this.props.status;
     return (
       <Row value={index + 1} key={index} className={s.questionItem}>
-        <Col md={8} className="text-right">
+        <Col md={8} mdOffset={1} className={`text-right ${s.vcenter}`}>
           <p>{index + 1}. {text}</p>
         </Col>
-        <Col md={4} className="text-center">
+        <Col md={2} className={`text-center ${s.vcenter}`}>
           <ButtonGroup>
             <Button
               className={status === 'no' && 'btn-primary'}

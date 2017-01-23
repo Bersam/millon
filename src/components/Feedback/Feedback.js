@@ -1,4 +1,4 @@
-/**
+/**  -*- mode: react; -*-
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
  * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
@@ -16,15 +16,15 @@ class Feedback extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
+          {/* <a
+              className={s.link}
+              href="https://gitter.im/kriasoft/react-starter-kit"
+              >Ask a question</a>
+              <span className={s.spacer}>|</span> */}
           <a
             className={s.link}
-            href="https://gitter.im/kriasoft/react-starter-kit"
-          >Ask a question</a>
-          <span className={s.spacer}>|</span>
-          <a
-            className={s.link}
-            href="https://github.com/kriasoft/react-starter-kit/issues/new"
-          >Report an issue</a>
+            href="mailto:info@bersam.org?subject=Millon%20Test"
+          >اگر ایرادی در این وبسایت دیدید به ما گزارش دهید</a>
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-/**
+/**  -*- mode: react; -*-
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
  * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
@@ -21,7 +21,8 @@ class Contact extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>{this.props.title}</h1>
-          <p>...</p>
+          <p>برای تماس با سازنده‌ی سایت به آدرس زیر مراجعه کنید:</p>
+          <a href="http://bersam.org">برسام کرباسیون</a>
         </div>
       </div>
     );

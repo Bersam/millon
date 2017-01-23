@@ -1,46 +1,23 @@
 ---
-title: About Us
+title: درباره‌ی آزمون
 component: ContentPage
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat
-tortor fermentum mi fermentum dignissim. Nullam vel ipsum ut ligula elementum
-lobortis. Maecenas aliquam, massa laoreet lacinia pretium, nisi urna venenatis
-tortor, nec imperdiet tellus libero efficitur metus. Fusce semper posuere
-ligula, et facilisis metus bibendum interdum. Mauris at mauris sit amet sem
-pharetra commodo a eu leo. Nam at est non risus cursus maximus. Nam feugiat
-augue libero, id consectetur tortor bibendum non. Quisque nec fringilla lorem.
-Nullam efficitur vulputate mauris, nec maximus leo dignissim id.
 
-In hac habitasse platea dictumst. Duis sagittis dui ac ex suscipit maximus.
-Morbi pellentesque venenatis felis sed convallis. Nulla varius, nibh vitae
-placerat tempus, mauris sem elementum ipsum, eget sollicitudin nisl est vel
-purus. Fusce malesuada odio velit, non cursus leo fermentum id. Cras pharetra
-sodales fringilla. Etiam quis est a dolor egestas pellentesque. Maecenas non
-scelerisque purus, congue cursus arcu. Donec vel dapibus mi. Mauris maximus
-posuere placerat. Sed et libero eu nibh tristique mollis a eget lectus. Donec
-interdum augue sollicitudin vehicula hendrerit. Vivamus justo orci, molestie
-ac sollicitudin ac, lobortis at tellus. Etiam rhoncus ullamcorper risus eu
-tempor. Sed porttitor, neque ac efficitur gravida, arcu lacus pharetra dui, in
-consequat elit tellus auctor nulla. Donec placerat elementum diam, vitae
-imperdiet lectus luctus at.
+پرسشنامه چند محوری میلون (MCMI) یک پرسشنامه خود سنجی استاندارد شده است که دامنهٔ گسترده‌ای از اطلاعات مربوط به شخصیت، سازگاری هیجانی، ونگرش مراجعان به آزمون را می‌سنجد.
+این پرسشنامه برای بزرگسالان ۱۸ سال به بالا که دست کم توانایی خواندن آنها تا سطح کلاس هشتم است طراحی شده است
+نسخه اصلی این آزمون در سال ۱۹۷۷توسط تئودور میلون تدوین و ارائه شد و از آن زمان تا کنون ۲ بار تجدید نظر شده است.
+* از زمان چاپ نسخه اصلی این پرسشنامه تاکنون بیش از ششصد مقاله دربارهٔ آن یا با استفاده از آن منتشر شده است
+* یکی از پر استفاده‌ترین آزمونها در حرفه بالینی است.
+* نسخه فعلی میلون ۳ شامل ۱۷۵ ماده است که تحت ۲۸ مقیاس جداگانه براساس طبقه بندیهای زیرنمره گذاری می‌شود.
+* شاخصهای تغییرپذیری
+* الگوهای شخصیت بالینی
+* آسیب‌شناسی شدید شخصیت
+* نشانگان بالینی
+* نشانگان شدید
 
-Nullam eu feugiat mi. Quisque nec tristique nisl, dignissim dictum leo. Nam
-non quam nisi. Donec rutrum turpis ac diam blandit, id pulvinar mauris
-suscipit. Pellentesque tincidunt libero ultricies risus iaculis, sit amet
-consequat velit blandit. Fusce quis varius nulla. Nullam nisi nisi, suscipit
-ut magna quis, feugiat porta nibh. Sed id enim lectus. Suspendisse elementum
-justo sapien, sit amet consequat orci accumsan et. Aliquam ornare ullamcorper
-sem sed finibus. Nullam ac lacus pulvinar, egestas felis ut, accumsan est.
-
-Pellentesque sagittis vehicula sem quis luctus. Proin sodales magna in lorem
-hendrerit aliquam. Integer eu varius orci. Vestibulum ante ipsum primis in
-faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum
-primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut at mauris
-nibh. Suspendisse maximus ac eros at vestibulum.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque egestas
-tortor et dui consequat faucibus. Nunc vitae odio ornare, venenatis ligula a,
-vulputate nisl. Aenean congue varius ex, sit amet bibendum odio posuere at.
-Nulla facilisi. In finibus, nulla vitae tincidunt ornare, sapien nulla
-fermentum mauris, sed consectetur tortor arcu eget arcu. Vestibulum vel quam
-enim.
+میلون ۳ از برخی جهات می‌تواند جانشین خوبی برای MMPI باشد هردو ابزار دامنه گسترده‌ای از آسیب شناسی بزرگسالان الگوهای پایدار شخصیت و نشانه شناسی بالینی را پوشش می‌دهند.
+* میلون ازسایر جهات مکمل mmpi است mmpi دراصل بر اختلالهای محور۱ تأکید دارد میلون برای کمک به تشخیص اختلالهای محور۲ تأکید دارد.
+* میلون کوتاهتراز mmpi است
+* تکمیل میلون ۲۰ تا ۳۰ دقیقه زمان می‌برد
+* میلون ۳ در مجموع ۲۴ مقیاس بالینی و ۴ شاخص روایی دارد
+* از مجموع این ۲۴ مقیاس، ۱۴ مقیاس آن به سنجش اختلالات شخصیت بر اساس محور ۲ می‌پردازد و ۱۰ مقیاس دیگر نشانگان بالینی را بر اساس محور یک می‌سنجند.

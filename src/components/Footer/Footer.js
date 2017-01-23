@@ -1,4 +1,4 @@
-/**
+/**  -*- mode: react; -*-
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
  * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
@@ -17,15 +17,13 @@ class Footer extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <span className={s.text}>© Your Company</span>
+          <Link className={s.link} to="/">خانه</Link>
           <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/">Home</Link>
+          <Link className={s.link} to="/about">درباره‌ی آزمون</Link>
           <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/admin">Admin</Link>
+          <Link className={s.link} to="/contact">تماس با ما</Link>
           <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/privacy">Privacy</Link>
-          <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/not-found">Not Found</Link>
+          <a className={s.link} href="http://bersam.org">سازنده</a>
         </div>
       </div>
     );

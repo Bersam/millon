@@ -31,7 +31,7 @@ export default {
      * const { data } = await resp.json();
      * if (!data || !data.news) throw new Error('Failed to load the news feed.');*/
     return {
-      title: 'React Starter Kit',
+      title: 'پرسشنامه چند محوری بالینی میلون 3',
       component: <Layout><Home questions={data.data} /></Layout>,
     };
   },

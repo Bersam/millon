@@ -32,6 +32,7 @@ class Home extends React.Component {
     this.state = {};
     this.state.result = {};
     this.state.activePage = 1;
+    this.state.gender = 'male';
     this.state.questions = props.questions;
   }
 

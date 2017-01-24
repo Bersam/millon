@@ -8,7 +8,7 @@
  */
 
 import React, { PropTypes } from 'react';
-import { Pagination, Row, Col, ButtonGroup, Button } from 'react-bootstrap';
+import { Pagination, Row, Col, ButtonGroup, Button, Modal } from 'react-bootstrap';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 import Result from '../../components/Result';
@@ -69,6 +69,14 @@ class Home extends React.Component {
     this.setState(newState);
   };
 
+  closeHelp = () => {
+    this.setState({ help: false });
+  }
+
+  openHelp = () => {
+    this.setState({ help: true });
+  }
+
 
   render() {
     const fromNo = (this.state.activePage - 1) * 10;
@@ -94,20 +102,34 @@ class Home extends React.Component {
           </Row>
           <h2>سوال‌ها</h2>
           <Row>
-            <Col md={8} className={`text-right ${s.vcenter}`}>
-              <p>
-                - اگر شما با یک جمله موافق هستید یا
-                معتقدید که منطبق با وضعیت شماست واژه «بلی» را در پاسخنامه علامت بزنید.
-                <br />
-                - اگر شما با یک جمله موافق نیستید یا
-                معتقدید که در مورد شما صحت ندارد واژه «خیر» را در پاسخنامه علامت بزنید.
-                <br />
-                - سعی کنید به همه جمله‌ها جواب دهید حتی اگر از انتخاب خود مطمئن نیستید.
-                <br />
-                - اگر حداکثر سعی خود را نمودید ولی نتوانستید نتیجه بگیرید،
-                واژه خیر را در پاسخنامه علامت بزنید.
-                <br />
-              </p>
+            <Col md={8} className={`text-left ${s.vcenter}`}>
+              <Button
+                bsStyle="primary"
+                onClick={this.openHelp}
+              >
+                نحوه‌ی پاسخ‌دهی
+              </Button>
+              <Modal show={this.state.help} onHide={this.closeHelp}>
+                <Modal.Header closeButton>
+                  <Modal.Title>راهنمایی</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <h4>نحوه‌ی پاسخ دهی به سوالات</h4>
+                  <p>
+                    - اگر شما با یک جمله موافق هستید یا
+                    معتقدید که منطبق با وضعیت شماست واژه «بلی» را در پاسخنامه علامت بزنید.
+                    <br />
+                    - اگر شما با یک جمله موافق نیستید یا
+                    معتقدید که در مورد شما صحت ندارد واژه «خیر» را در پاسخنامه علامت بزنید.
+                    <br />
+                    - سعی کنید به همه جمله‌ها جواب دهید حتی اگر از انتخاب خود مطمئن نیستید.
+                    <br />
+                    - اگر حداکثر سعی خود را نمودید ولی نتوانستید نتیجه بگیرید،
+                    واژه خیر را در پاسخنامه علامت بزنید.
+                    <br />
+                  </p>
+                </Modal.Body>
+              </Modal>
             </Col>
             <Col md={2} className={`text-left ${s.vcenter}`}>
               جنسیت:
@@ -135,8 +157,7 @@ class Home extends React.Component {
               <Pagination
                 prev
                 next
-                first
-                last
+                boundaryLinks
                 ellipsis
                 maxButtons={4}
                 bsSize="medium"
@@ -165,8 +186,7 @@ class Home extends React.Component {
               <Pagination
                 prev
                 next
-                first
-                last
+                boundaryLinks
                 ellipsis
                 maxButtons={4}
                 bsSize="medium"

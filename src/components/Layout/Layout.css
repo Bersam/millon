@@ -30,7 +30,8 @@ a {
   color: #0074c2;
 }
 
-* {
+*,
+button {
   font-family: var(--font-family-base);
 }
 

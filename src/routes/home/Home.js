@@ -152,21 +152,21 @@ class Home extends React.Component {
             </Col>
           </Row>
           <hr />
-          <Row>
-            <Col className="text-center">
+          {/* <Row>
+              <Col className="text-center">
               <Pagination
-                prev
-                next
-                boundaryLinks
-                ellipsis
-                maxButtons={4}
-                bsSize="medium"
-                items={maxPage}
-                activePage={this.state.activePage}
-                onSelect={this.handlePageChange}
+              prev
+              next
+              boundaryLinks
+              ellipsis
+              maxButtons={4}
+              bsSize="medium"
+              items={maxPage}
+              activePage={this.state.activePage}
+              onSelect={this.handlePageChange}
               />
-            </Col>
-          </Row>
+              </Col>
+              </Row> */}
           <br />
           {questions.map((item, index) => (
             <Question

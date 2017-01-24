@@ -133,6 +133,12 @@ class Home extends React.Component {
           <Row>
             <Col className="text-center">
               <Pagination
+                prev
+                next
+                first
+                last
+                ellipsis
+                maxButtons={4}
                 bsSize="medium"
                 items={maxPage}
                 activePage={this.state.activePage}
@@ -157,6 +163,12 @@ class Home extends React.Component {
           <Row>
             <Col className="text-center">
               <Pagination
+                prev
+                next
+                first
+                last
+                ellipsis
+                maxButtons={4}
                 bsSize="medium"
                 items={maxPage}
                 activePage={this.state.activePage}

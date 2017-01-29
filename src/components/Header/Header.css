@@ -51,6 +51,16 @@
   font-weight: normal;
   font-size: 4em;
   line-height: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.bannerTitle:hover {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+a:link {
+  text-decoration: none;
 }
 
 .bannerDesc {

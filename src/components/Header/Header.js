@@ -10,6 +10,7 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.css';
+import Link from '../Link';
 
 class Header extends React.Component {
   render() {
@@ -17,7 +18,9 @@ class Header extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <div className={s.banner}>
-            <h1 className={s.bannerTitle}>MCMI - III</h1>
+            <Link to="/">
+              <h1 className={s.bannerTitle}>MCMI - III</h1>
+            </Link>
             <p className={s.bannerDesc}>
               میلون‬ ‫چندمحوری‬ ‫بالینی‬ ‫آزمون‬ ‫تشخیصی‬ ‫روایی‬ - ویرایش ۳
             </p>

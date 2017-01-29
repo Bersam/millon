@@ -34,7 +34,7 @@ export default {
 
     // Provide default values for title, description etc.
     route.title = `${route.title || 'میلون تست'} - millon.ir`;
-    route.description = route.description || '';
+    route.description = route.description || 'اجرا و تفسیر رایگان پرسشنامه‌ی چند محوری بالینی میلون، نسخه‌ی سوم، MCMI-III، به زبان فارسی';
 
     return route;
   },

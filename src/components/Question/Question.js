@@ -25,7 +25,7 @@ class Header extends React.Component {
     const text = this.props.text;
     const status = this.props.status;
     return (
-      <Row value={index + 1} key={index} className={s.questionItem}>
+      <Row key={index} className={s.questionItem}>
         <Col md={8} mdOffset={1} className={`text-right ${s.vcenter}`}>
           <p>{index + 1}. {text}</p>
         </Col>

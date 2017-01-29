@@ -19,7 +19,7 @@ class Header extends React.Component {
         <div className={s.container}>
           <div className={s.banner}>
             <Link to="/">
-              <h1 className={s.bannerTitle}>MCMI - III</h1>
+              <h2 className={s.bannerTitle}>MCMI - III (فارسی)</h2>
             </Link>
             <p className={s.bannerDesc}>
               میلون‬ ‫چندمحوری‬ ‫بالینی‬ ‫آزمون‬ ‫تشخیصی‬ ‫روایی‬ - ویرایش ۳

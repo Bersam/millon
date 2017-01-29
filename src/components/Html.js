@@ -22,7 +22,7 @@ class Html extends React.Component {
   render() {
     const { title, description, style, scripts, children } = this.props;
     return (
-      <html className="no-js" lang="fa" xmlns="http://www.w3.org/1999/xhtml">
+      <html dir="rtl" className="no-js" lang="fa" xmlns="http://www.w3.org/1999/xhtml">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
